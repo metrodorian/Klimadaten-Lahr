@@ -1,0 +1,10 @@
+Stations_ID;Stationsname;Von_Datum;Bis_Datum
+  2812;Lahr;19491001;19810331
+  2812;Lahr-Dinglingen;19810401;19941231
+  2812;Lahr;19950101;
+
+Stations_ID;Betreibername;Von_Datum;Bis_Datum
+  2812;Wetterdienst;19491001;19521110
+  2812;DWD;19521111;19941231
+  2812;DWD;19950101;
+generiert: 15.05.2025 --  Deutscher Wetterdienst  --
