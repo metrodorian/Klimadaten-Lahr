@@ -20,6 +20,16 @@ Analyse der Jahresdurchschnittstemperaturen der DWD-Wetterstation **Lahr** (ID 0
 | Wärmstes Jahr | 2023 (12,9 °C) |
 | Referenz-Ø (1995–2014) | 10,94 °C |
 
+## Datenqualität
+
+Die Rohdaten enthalten **52 fehlende Messstunden** (von ~262.000 gesamt, ~0,02 %), die der DWD mit dem Platzhalterwert `-999` kennzeichnet. Diese Werte treten an folgenden Zeiträumen auf:
+
+- 13.01.2014, 01–04 Uhr (4 Stunden)
+- 29.06.2021, 14 Uhr (1 Stunde)
+- 28.02.2023 – 02.03.2023 (47 Stunden)
+
+Im Analyse-Skript werden alle Werte unter −90 °C herausgefiltert (`df[df["TT_TU"] > -90]`), sodass die −999-Einträge nicht in die Berechnung einfließen. Der Einfluss auf die Jahresdurchschnitte ist aufgrund des geringen Anteils vernachlässigbar.
+
 ## Dateien
 
 - `produkt_tu_stunde_19950101_20241231_02812.txt` – Rohdaten (stündliche Temperaturen)
